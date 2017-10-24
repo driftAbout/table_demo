@@ -2,27 +2,23 @@
 
 var table  = document.getElementById('table_content');
 var data = [];
+var cars = [];
 
-var cars = [
-  {
-    make: 'Honda',
-    model: 'accord',
-    year: 2011,
-    milage:87000
-  },
-  {
-    make: 'Toyota',
-    model: 'corolla',
-    year: 1999,
-    milage:213000
-  },
-  {
-    make: 'Ford',
-    model: 'Escort',
-    year: 1993,
-    milage: 98000
-  }
-];
+function Car(make, model, year, milage){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.milage = milage;
+}
+
+
+var toyota = new Car('toyota', 'corrolla', 1991, 213000);
+var honda = new Car('honda', 'civic', 1980, 212698);
+var ford = new Car('ford', 'Escort', 1998, 129000);
+
+cars.push(toyota);
+cars.push(honda);
+cars.push(ford);
 
 for (var i = 0; i < cars.length; i++){
   data.push(
